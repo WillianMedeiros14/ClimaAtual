@@ -11,3 +11,7 @@ export const BackgroundGradient = styled(LinearGradient)`
   padding-left: 40px;
   padding-right: 40px;
 `;
+
+export const ScrollView = styled.ScrollView`
+  flex: 1;
+`;

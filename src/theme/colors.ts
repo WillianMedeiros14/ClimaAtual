@@ -7,5 +7,7 @@ export const colors = {
 
   blueWhite100: '#47BBE1',
 
+  blueCard: 'rgba(0, 16, 38, 0.3)',
+
   red: '#FF7C7C',
 };
