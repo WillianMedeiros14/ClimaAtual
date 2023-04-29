@@ -7,10 +7,15 @@ import Text from 'global/components/Text';
 
 import CalendarIconSvg from 'assets/icons/calendar.svg';
 import { ItemsNextForecast } from '../ItemsNextForecast';
+import { TypeMode } from 'features/hooks/useColorsGradient';
 
-export function NextForecast() {
+interface Props {
+  type: TypeMode;
+}
+
+export function NextForecast({ type }: Props) {
   return (
-    <Container>
+    <Container type={type}>
       <HeaderNextForecast>
         <Text variant="SFProDisplayBold" fontSize={20}>
           Next Forecast

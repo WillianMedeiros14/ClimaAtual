@@ -5,8 +5,13 @@ import { Spacer } from 'global/components/Spacer';
 
 import FeaturedImg from 'assets/images/SuncloudAngledRain.png';
 import { ItemsCurrentInformation } from '../ItemsCurrentInformation';
+import { TypeMode } from 'features/hooks/useColorsGradient';
 
-export function CurrentInformation() {
+interface Props {
+  type: TypeMode;
+}
+
+export function CurrentInformation({ type }: Props) {
   return (
     <Container>
       <FeaturedImage source={FeaturedImg} />
@@ -19,7 +24,7 @@ export function CurrentInformation() {
 
       <Spacer height={31} />
 
-      <Row>
+      <Row type={type}>
         <ItemsCurrentInformation icon="rain" value="6%" />
 
         <ItemsCurrentInformation icon="humidity" value="90%" />

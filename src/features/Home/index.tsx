@@ -1,6 +1,5 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { BackgroundGradient, Container, ScrollView } from './styles';
-import { useTheme } from 'styled-components';
 import { StatusBar } from 'react-native';
 import { Header } from 'features/components/Header';
 import { CurrentInformation } from 'features/components/CurrentInformation';
@@ -8,10 +7,13 @@ import { Today } from 'features/components/Today';
 import { NextForecast } from 'features/components/NextForecast';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import { Spacer } from 'global/components/Spacer';
+import useColorsGradient, { TypeMode } from 'features/hooks/useColorsGradient';
 
 export default function Home() {
   const insets = useSafeAreaInsets();
-  const theme = useTheme();
+  const { getColorGradient } = useColorsGradient();
+
+  const [type, setType] = useState<TypeMode>('white');
 
   return (
     <Container>
@@ -20,13 +22,13 @@ export default function Home() {
         start={{ x: 0.0, y: 0.1 }}
         end={{ x: 0.5, y: 1.0 }}
         locations={[0, 0.3, 0.8]}
-        colors={[theme.colors.blueDark100, theme.colors.blueDark60, theme.colors.blueDark80]}>
+        colors={getColorGradient(type)}>
         <Header />
 
         <ScrollView>
-          <CurrentInformation />
-          <Today />
-          <NextForecast />
+          <CurrentInformation type={type} />
+          <Today type={type} />
+          <NextForecast type={type} />
 
           <Spacer height={insets.bottom + 20} />
         </ScrollView>

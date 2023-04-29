@@ -6,7 +6,11 @@ export type ITypecolors =
   | 'blueDark80'
   | 'blueDark60'
   | 'blueWhite100'
+  | 'blueWhite100'
+  | 'blueWhite80'
+  | 'blueWhite60'
   | 'blueCard'
+  | 'blueWhiteCard'
   | 'blueDarkItemsToday'
   | 'blueWhiteItemsToday'
   | 'red';
