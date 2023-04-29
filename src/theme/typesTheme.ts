@@ -1,4 +1,4 @@
-export type ITypecolors = 'primary';
+export type ITypecolors = 'primary' | 'white';
 
 export interface IStyleFontVariant {
   fontFamily: string;
