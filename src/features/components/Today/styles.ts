@@ -11,6 +11,7 @@ export const Container = styled.View`
 export const HeaderToday = styled.View`
   flex-direction: row;
   justify-content: space-between;
+  align-items: center;
 `;
 
 export const Content = styled.View`

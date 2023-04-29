@@ -16,4 +16,14 @@ export const typography = {
     fontSize: 18,
     color: colors.white,
   },
+  AlegreyaSansMedium: {
+    fontFamily: 'AlegreyaSansMedium',
+    fontSize: 18,
+    color: colors.white,
+  },
+  AlegreyaSansBold: {
+    fontFamily: 'AlegreyaSansBold',
+    fontSize: 18,
+    color: colors.white,
+  },
 };

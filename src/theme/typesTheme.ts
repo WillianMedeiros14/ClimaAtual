@@ -1,6 +1,7 @@
 export type ITypecolors =
   | 'primary'
   | 'white'
+  | 'white50'
   | 'blueDark100'
   | 'blueDark80'
   | 'blueDark60'
@@ -16,7 +17,12 @@ export interface IStyleFontVariant {
   color: string;
 }
 
-export type IStyleTopography = 'SFProDisplayRegular' | 'SFProDisplaySemibold' | 'SFProDisplayBold';
+export type IStyleTopography =
+  | 'SFProDisplayRegular'
+  | 'SFProDisplaySemibold'
+  | 'SFProDisplayBold'
+  | 'AlegreyaSansMedium'
+  | 'AlegreyaSansBold';
 
 export type ISpacing =
   | 'none'

@@ -1,6 +1,7 @@
 export const colors = {
   primary: '#35C2C1',
   white: '#FFFFFF',
+  white50: 'rgba(255, 255, 255, 0.5)',
   blueDark100: '#08244F',
   blueDark80: '#0B42AB',
   blueDark60: '#134CB5',

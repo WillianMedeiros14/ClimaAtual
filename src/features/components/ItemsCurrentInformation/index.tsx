@@ -21,13 +21,13 @@ interface Props {
   value: string;
 }
 
-export function ItemsCurrentInformation({ icon }: Props) {
+export function ItemsCurrentInformation({ icon, value }: Props) {
   return (
     <Container>
       {icons[icon]}
       <Spacer width={5} />
       <Text variant="SFProDisplayBold" fontSize={14}>
-        6%
+        {value}
       </Text>
     </Container>
   );

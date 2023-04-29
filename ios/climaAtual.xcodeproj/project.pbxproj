@@ -17,6 +17,8 @@
 		EDE7538388E44C819E33268D /* SFProDisplayBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EF9E6D71594B461A8D35E3F3 /* SFProDisplayBold.ttf */; };
 		6860FA118D89488DB76AA995 /* SFProDisplayRegular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F5F88D368AFE40ADA9DB5EDC /* SFProDisplayRegular.ttf */; };
 		C23195FF94B849DB8CC8C45C /* SFProDisplaySemibold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9E2192DBB60545CAACBCD8AD /* SFProDisplaySemibold.ttf */; };
+		84BC934B728141EF98B6E9C2 /* AlegreyaSansBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2CDE6EB5A002409996C12FC5 /* AlegreyaSansBold.ttf */; };
+		B79FD219116B4180A39B1968 /* AlegreyaSansMedium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7A42C0ADE8EF4606AC93FAA9 /* AlegreyaSansMedium.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,6 +52,8 @@
 		EF9E6D71594B461A8D35E3F3 /* SFProDisplayBold.ttf */ = {isa = PBXFileReference; name = "SFProDisplayBold.ttf"; path = "../src/assets/fonts/SFProDisplayBold.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 		F5F88D368AFE40ADA9DB5EDC /* SFProDisplayRegular.ttf */ = {isa = PBXFileReference; name = "SFProDisplayRegular.ttf"; path = "../src/assets/fonts/SFProDisplayRegular.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 		9E2192DBB60545CAACBCD8AD /* SFProDisplaySemibold.ttf */ = {isa = PBXFileReference; name = "SFProDisplaySemibold.ttf"; path = "../src/assets/fonts/SFProDisplaySemibold.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		2CDE6EB5A002409996C12FC5 /* AlegreyaSansBold.ttf */ = {isa = PBXFileReference; name = "AlegreyaSansBold.ttf"; path = "../src/assets/fonts/AlegreyaSansBold.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		7A42C0ADE8EF4606AC93FAA9 /* AlegreyaSansMedium.ttf */ = {isa = PBXFileReference; name = "AlegreyaSansMedium.ttf"; path = "../src/assets/fonts/AlegreyaSansMedium.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -161,6 +165,8 @@
 				EF9E6D71594B461A8D35E3F3 /* SFProDisplayBold.ttf */,
 				F5F88D368AFE40ADA9DB5EDC /* SFProDisplayRegular.ttf */,
 				9E2192DBB60545CAACBCD8AD /* SFProDisplaySemibold.ttf */,
+				2CDE6EB5A002409996C12FC5 /* AlegreyaSansBold.ttf */,
+				7A42C0ADE8EF4606AC93FAA9 /* AlegreyaSansMedium.ttf */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -265,6 +271,8 @@
 				EDE7538388E44C819E33268D /* SFProDisplayBold.ttf in Resources */,
 				6860FA118D89488DB76AA995 /* SFProDisplayRegular.ttf in Resources */,
 				C23195FF94B849DB8CC8C45C /* SFProDisplaySemibold.ttf in Resources */,
+				84BC934B728141EF98B6E9C2 /* AlegreyaSansBold.ttf in Resources */,
+				B79FD219116B4180A39B1968 /* AlegreyaSansMedium.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
