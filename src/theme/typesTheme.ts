@@ -1,4 +1,11 @@
-export type ITypecolors = 'primary' | 'white';
+export type ITypecolors =
+  | 'primary'
+  | 'white'
+  | 'blueDark100'
+  | 'blueDark80'
+  | 'blueDark60'
+  | 'blueWhite100'
+  | 'red';
 
 export interface IStyleFontVariant {
   fontFamily: string;
