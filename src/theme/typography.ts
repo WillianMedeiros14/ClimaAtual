@@ -1,18 +1,19 @@
 import { colors } from './colors';
 
-/*
-  * Typography
-  400: Regular
-  500: Medium
-  600: SemiBold
-  700: Bold
-  800: Extra-Bold
-*/
-
 export const typography = {
-  UrbanistRegular: {
-    fontFamily: 'Urbanist-Regular',
-    fontSize: 15,
+  SFProDisplayRegular: {
+    fontFamily: 'SFProDisplayRegular',
+    fontSize: 18,
+    color: colors.primary,
+  },
+  SFProDisplaySemibold: {
+    fontFamily: 'SFProDisplaySemibold',
+    fontSize: 18,
+    color: colors.primary,
+  },
+  SFProDisplayBold: {
+    fontFamily: 'SFProDisplayBold',
+    fontSize: 18,
     color: colors.primary,
   },
 };

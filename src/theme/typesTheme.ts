@@ -6,7 +6,7 @@ export interface IStyleFontVariant {
   color: string;
 }
 
-export type IStyleTopography = 'UrbanistRegular';
+export type IStyleTopography = 'SFProDisplayRegular' | 'SFProDisplaySemibold' | 'SFProDisplayBold';
 
 export type ISpacing =
   | 'none'
