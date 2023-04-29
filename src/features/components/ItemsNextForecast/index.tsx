@@ -17,7 +17,6 @@ export function ItemsNextForecast() {
           <Text variant="AlegreyaSansMedium">13</Text>
           <Text
             variant="AlegreyaSansMedium"
-            color="white50"
             fontSize={10}
             style={{
               marginTop: 5.5,
