@@ -29,7 +29,9 @@ export function ItemsNextForecast() {
         <Spacer width={10} />
 
         <ItemsRight>
-          <Text variant="AlegreyaSansMedium">10</Text>
+          <Text variant="AlegreyaSansMedium" color="white50">
+            10
+          </Text>
           <Text
             variant="AlegreyaSansMedium"
             color="white50"

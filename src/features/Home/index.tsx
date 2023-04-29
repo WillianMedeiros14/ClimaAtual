@@ -13,7 +13,7 @@ export default function Home() {
   const insets = useSafeAreaInsets();
   const { getColorGradient } = useColorsGradient();
 
-  const [type, setType] = useState<TypeMode>('white');
+  const [type, setType] = useState<TypeMode>('sunny');
 
   return (
     <Container>
