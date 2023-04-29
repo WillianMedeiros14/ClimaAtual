@@ -4,6 +4,7 @@ import { useTheme } from 'styled-components';
 import { StatusBar } from 'react-native';
 import { Header } from 'features/components/Header';
 import { CurrentInformation } from 'features/components/CurrentInformation';
+import { Today } from 'features/components/Today';
 
 export default function Home() {
   const theme = useTheme();
@@ -19,6 +20,7 @@ export default function Home() {
         <Header />
         <ScrollView>
           <CurrentInformation />
+          <Today />
         </ScrollView>
       </BackgroundGradient>
     </Container>

@@ -7,11 +7,11 @@ export const Container = styled.View`
 
 export const BackgroundGradient = styled(LinearGradient)`
   flex: 1;
-  padding-top: 20px;
-  padding-left: 40px;
-  padding-right: 40px;
 `;
 
 export const ScrollView = styled.ScrollView`
   flex: 1;
+
+  padding-left: 40px;
+  padding-right: 40px;
 `;

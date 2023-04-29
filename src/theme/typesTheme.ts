@@ -6,6 +6,8 @@ export type ITypecolors =
   | 'blueDark60'
   | 'blueWhite100'
   | 'blueCard'
+  | 'blueDarkItemsToday'
+  | 'blueWhiteItemsToday'
   | 'red';
 
 export interface IStyleFontVariant {
