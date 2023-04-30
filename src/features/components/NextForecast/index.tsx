@@ -8,12 +8,14 @@ import Text from 'global/components/Text';
 import CalendarIconSvg from 'assets/icons/calendar.svg';
 import { ItemsNextForecast } from '../ItemsNextForecast';
 import { TypeMode } from 'features/hooks/useColorsGradient';
+import { IForecast } from 'features/services/getData.service';
 
 interface Props {
   type: TypeMode;
+  forecast: IForecast[];
 }
 
-export function NextForecast({ type }: Props) {
+export function NextForecast({ type, forecast }: Props) {
   return (
     <Container type={type}>
       <HeaderNextForecast>
@@ -24,9 +26,20 @@ export function NextForecast({ type }: Props) {
         <CalendarIconSvg />
       </HeaderNextForecast>
 
-      <ItemsNextForecast />
-
-      <ItemsNextForecast />
+      {forecast.map((itemForecast, index) => {
+        if (index > 0) {
+          return (
+            <ItemsNextForecast
+              key={itemForecast.date}
+              weekday={itemForecast.weekday}
+              date={itemForecast.date}
+              max={itemForecast.max}
+              min={itemForecast.min}
+              condition={itemForecast.condition}
+            />
+          );
+        }
+      })}
     </Container>
   );
 }

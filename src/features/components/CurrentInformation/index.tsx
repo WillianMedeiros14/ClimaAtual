@@ -9,27 +9,41 @@ import { TypeMode } from 'features/hooks/useColorsGradient';
 
 interface Props {
   type: TypeMode;
+  temperature: number;
+  rain: number;
+  windSpeedy: string;
+  humidity: number;
+  min: number;
+  max: number;
 }
 
-export function CurrentInformation({ type }: Props) {
+export function CurrentInformation({
+  type,
+  temperature,
+  rain,
+  windSpeedy,
+  humidity,
+  min,
+  max,
+}: Props) {
   return (
     <Container>
       <FeaturedImage source={FeaturedImg} />
       <Text variant="SFProDisplaySemibold" fontSize={64}>
-        28°
+        {temperature}°
       </Text>
       <Spacer height={5} />
       <Text variant="SFProDisplayRegular">Precipitations</Text>
-      <Text variant="SFProDisplayRegular">{'Max.: 31º  Min.: 25º'}</Text>
+      <Text variant="SFProDisplayRegular">{`Max.: ${max}º  Min.: ${min}º`}</Text>
 
       <Spacer height={31} />
 
       <Row type={type}>
-        <ItemsCurrentInformation icon="rain" value="6%" />
+        <ItemsCurrentInformation icon="rain" value={`${rain}%`} />
 
-        <ItemsCurrentInformation icon="humidity" value="90%" />
+        <ItemsCurrentInformation icon="humidity" value={`${humidity}%`} />
 
-        <ItemsCurrentInformation icon="windSpeed" value="19km/h" />
+        <ItemsCurrentInformation icon="windSpeed" value={windSpeedy} />
       </Row>
     </Container>
   );

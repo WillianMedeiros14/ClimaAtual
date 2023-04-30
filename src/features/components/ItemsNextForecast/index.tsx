@@ -3,18 +3,41 @@ import { Container, ContentRight, Icon, ItemsRight } from './styles';
 import Text from 'global/components/Text';
 import { Spacer } from 'global/components/Spacer';
 
-import BigRainDropsImage from 'assets/images/BigRainDrops.png';
+import RainSvg from 'assets/icons/rain.svg';
+import ClearDaySvg from 'assets/icons/clear_day.svg';
+import CloudlyDaySvg from 'assets/icons/cloudly_day.svg';
 
-export function ItemsNextForecast() {
+export type TypeCondition = 'rain' | 'clear_day' | 'cloudly_day';
+
+const iconsCondition = {
+  rain: <RainSvg width={30} height={30} />,
+  clear_day: <ClearDaySvg width={30} height={30} />,
+  cloudly_day: <CloudlyDaySvg width={30} height={30} />,
+};
+
+interface Props {
+  weekday: string;
+  date: string;
+  max: number;
+  min: number;
+  condition: TypeCondition;
+}
+
+export function ItemsNextForecast({ weekday, date, max, min, condition }: Props) {
   return (
     <Container>
-      <Text variant="AlegreyaSansBold">Monday</Text>
+      <Text variant="AlegreyaSansBold">
+        {weekday} {' - '}
+        <Text variant="AlegreyaSansMedium" fontSize={15}>
+          {date}
+        </Text>
+      </Text>
 
-      <Icon source={BigRainDropsImage} />
+      {iconsCondition[condition]}
 
       <ContentRight>
         <ItemsRight>
-          <Text variant="AlegreyaSansMedium">13</Text>
+          <Text variant="AlegreyaSansMedium">{max}</Text>
           <Text
             variant="AlegreyaSansMedium"
             fontSize={10}
@@ -29,7 +52,7 @@ export function ItemsNextForecast() {
 
         <ItemsRight>
           <Text variant="AlegreyaSansMedium" color="white50">
-            10
+            {min}
           </Text>
           <Text
             variant="AlegreyaSansMedium"

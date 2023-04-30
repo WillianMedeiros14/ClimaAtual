@@ -1,7 +1,7 @@
 import React from 'react';
 import { Container } from './styles';
 
-import RainIconSvg from 'assets/icons/rain.svg';
+import RainIconSvg from 'assets/icons/raindrops.svg';
 import HumidityIconSvg from 'assets/icons/humidity.svg';
 import WindSpeedIconSvg from 'assets/icons/windSpeed.svg';
 

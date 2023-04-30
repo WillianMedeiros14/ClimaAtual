@@ -9,13 +9,17 @@ import DownArrowIconSvg from 'assets/icons/downArrow.svg';
 
 import NotificationIconSvg from 'assets/icons/notification.svg';
 
-export function Header() {
+interface Props {
+  cityName: string;
+}
+
+export function Header({ cityName }: Props) {
   return (
     <Container>
       <Content>
         <LocationIconSvg />
         <Spacer width={12} />
-        <Text variant="SFProDisplaySemibold">Fortaleza</Text>
+        <Text variant="SFProDisplaySemibold">{cityName}</Text>
 
         <Spacer width={20} />
         <DownArrowIconSvg />

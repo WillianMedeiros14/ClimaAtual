@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { BackgroundGradient, Container, ScrollView } from './styles';
 import { StatusBar } from 'react-native';
 import { Header } from 'features/components/Header';
@@ -9,11 +9,21 @@ import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import { Spacer } from 'global/components/Spacer';
 import useColorsGradient, { TypeMode } from 'features/hooks/useColorsGradient';
 
+import useGetDataWeather from 'features/hooks/useGetDataWeather';
+import Text from 'global/components/Text';
+
 export default function Home() {
   const insets = useSafeAreaInsets();
   const { getColorGradient } = useColorsGradient();
 
-  const [type, setType] = useState<TypeMode>('dark');
+  const { getWeather, loading, weather } = useGetDataWeather();
+
+  // const [type, setType] = useState<TypeMode>('sunny');
+  const type: TypeMode = 'dark';
+
+  useEffect(() => {
+    getWeather();
+  }, []);
 
   return (
     <Container>
@@ -23,15 +33,32 @@ export default function Home() {
         end={{ x: 0.5, y: 1.0 }}
         locations={[0, 0.3, 0.8]}
         colors={getColorGradient(type)}>
-        <Header />
+        {loading ? (
+          <Text variant="SFProDisplayRegular">Loading</Text>
+        ) : (
+          <>
+            <Header cityName={weather.city_name} />
 
-        <ScrollView>
-          <CurrentInformation type={type} />
-          <Today type={type} />
-          <NextForecast type={type} />
+            <ScrollView>
+              <CurrentInformation
+                type={type}
+                humidity={weather.humidity}
+                temperature={weather.temp}
+                rain={weather.forecast?.[0].rain_probability}
+                windSpeedy={weather.wind_speedy}
+                min={weather.forecast?.[0].min}
+                max={weather.forecast?.[0].max}
+              />
+              <Today type={type} />
 
-          <Spacer height={insets.bottom + 20} />
-        </ScrollView>
+              {weather.forecast?.length > 0 ? (
+                <NextForecast type={type} forecast={weather.forecast} />
+              ) : null}
+
+              <Spacer height={insets.bottom + 20} />
+            </ScrollView>
+          </>
+        )}
       </BackgroundGradient>
     </Container>
   );
