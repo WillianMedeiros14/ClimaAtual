@@ -3,12 +3,18 @@ import { Container, Content, HeaderToday } from './styles';
 import Text from 'global/components/Text';
 import { ItemsToday } from '../ItemsToday';
 import { TypeMode } from 'features/hooks/useColorsGradient';
+import { formatDate } from 'features/utils/date';
 
 interface Props {
   type: TypeMode;
+  date: string;
 }
 
-export function Today({ type }: Props) {
+export function Today({ type, date }: Props) {
+  if (date === undefined) {
+    return null;
+  }
+
   return (
     <Container type={type}>
       <HeaderToday>
@@ -16,7 +22,7 @@ export function Today({ type }: Props) {
           Today
         </Text>
 
-        <Text variant="SFProDisplayRegular">Mar, 9</Text>
+        <Text variant="SFProDisplayRegular"> {formatDate(date)}</Text>
       </HeaderToday>
 
       <Content>

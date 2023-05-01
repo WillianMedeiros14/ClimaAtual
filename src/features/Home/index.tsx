@@ -49,7 +49,7 @@ export default function Home() {
                 min={weather.forecast?.[0].min}
                 max={weather.forecast?.[0].max}
               />
-              <Today type={type} />
+              <Today type={type} date={weather?.date} />
 
               {weather.forecast?.length > 0 ? (
                 <NextForecast type={type} forecast={weather.forecast} />
