@@ -4,7 +4,7 @@ import { IResultWeather, IWeather } from 'features/services/getData.service';
 import { api } from 'global/services/api';
 
 export default function useGetDataWeather() {
-  const [loading, setLoading] = useState(false);
+  const [loading, setLoading] = useState(true);
   const [weather, setWeather] = useState<IWeather>({} as IWeather);
 
   async function getWeather() {
@@ -13,13 +13,12 @@ export default function useGetDataWeather() {
       const response = await api.get<IResultWeather>('/');
 
       setWeather(response.data.results);
-      return response.data.results;
+      setTimeout(() => {
+        setLoading(false);
+      }, 2000);
     } catch (error) {
       console.log('Error');
       console.log(error);
-      return [];
-    } finally {
-      setLoading(false);
     }
   }
 

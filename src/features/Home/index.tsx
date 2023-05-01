@@ -11,8 +11,8 @@ import { Spacer } from 'global/components/Spacer';
 import useColorsGradient, { TypeMode } from 'features/hooks/useColorsGradient';
 
 import useGetDataWeather from 'features/hooks/useGetDataWeather';
-import Text from 'global/components/Text';
 import { getDayOrNight } from 'features/utils/getDayOrNigh';
+import { Splash } from 'features/Splash';
 
 export default function Home() {
   const insets = useSafeAreaInsets();
@@ -27,6 +27,10 @@ export default function Home() {
     getWeather();
   }, []);
 
+  if (loading) {
+    return <Splash />;
+  }
+
   return (
     <Container>
       <StatusBar translucent backgroundColor={'transparent'} barStyle={'light-content'} />
@@ -35,33 +39,26 @@ export default function Home() {
         end={{ x: 0.5, y: 1.0 }}
         locations={[0, 0.3, 0.8]}
         colors={getColorGradient(type)}>
-        {loading ? (
-          <Text variant="SFProDisplayRegular">Loading</Text>
-        ) : (
-          <>
-            <Header cityName={weather.city_name} />
+        <Header cityName={weather.city_name} />
 
-            <ScrollView
-              refreshControl={<RefreshControl refreshing={loading} onRefresh={getWeather} />}>
-              <CurrentInformation
-                type={type}
-                humidity={weather.humidity}
-                temperature={weather.temp}
-                rain={weather.forecast?.[0].rain_probability}
-                windSpeedy={weather.wind_speedy}
-                min={weather.forecast?.[0].min}
-                max={weather.forecast?.[0].max}
-              />
-              <Today type={type} date={weather?.date} />
+        <ScrollView refreshControl={<RefreshControl refreshing={loading} onRefresh={getWeather} />}>
+          <CurrentInformation
+            type={type}
+            humidity={weather.humidity}
+            temperature={weather.temp}
+            rain={weather.forecast?.[0].rain_probability}
+            windSpeedy={weather.wind_speedy}
+            min={weather.forecast?.[0].min}
+            max={weather.forecast?.[0].max}
+          />
+          <Today type={type} date={weather?.date} />
 
-              {weather.forecast?.length > 0 ? (
-                <NextForecast type={type} forecast={weather.forecast} />
-              ) : null}
+          {weather.forecast?.length > 0 ? (
+            <NextForecast type={type} forecast={weather.forecast} />
+          ) : null}
 
-              <Spacer height={insets.bottom + 20} />
-            </ScrollView>
-          </>
-        )}
+          <Spacer height={insets.bottom + 20} />
+        </ScrollView>
       </BackgroundGradient>
     </Container>
   );
