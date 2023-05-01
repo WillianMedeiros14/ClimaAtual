@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { RefreshControl } from 'react-native';
 import { BackgroundGradient, Container, ScrollView } from './styles';
 import { StatusBar } from 'react-native';
 import { Header } from 'features/components/Header';
@@ -40,7 +41,8 @@ export default function Home() {
           <>
             <Header cityName={weather.city_name} />
 
-            <ScrollView>
+            <ScrollView
+              refreshControl={<RefreshControl refreshing={loading} onRefresh={getWeather} />}>
               <CurrentInformation
                 type={type}
                 humidity={weather.humidity}
