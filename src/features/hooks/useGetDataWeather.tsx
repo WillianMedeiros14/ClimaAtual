@@ -11,7 +11,7 @@ export default function useGetDataWeather() {
     try {
       setLoading(true);
       const response = await api.get<IResultWeather>('/');
-      console.log(response.data);
+
       setWeather(response.data.results);
       return response.data.results;
     } catch (error) {

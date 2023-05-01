@@ -11,6 +11,7 @@ import useColorsGradient, { TypeMode } from 'features/hooks/useColorsGradient';
 
 import useGetDataWeather from 'features/hooks/useGetDataWeather';
 import Text from 'global/components/Text';
+import { getDayOrNight } from 'features/utils/getDayOrNigh';
 
 export default function Home() {
   const insets = useSafeAreaInsets();
@@ -18,10 +19,10 @@ export default function Home() {
 
   const { getWeather, loading, weather } = useGetDataWeather();
 
-  // const [type, setType] = useState<TypeMode>('sunny');
-  const type: TypeMode = 'dark';
+  const [type, setType] = useState<TypeMode>('sunny');
 
   useEffect(() => {
+    setType(getDayOrNight());
     getWeather();
   }, []);
 

@@ -1,4 +1,5 @@
 import { TypeCondition } from 'features/components/ItemsNextForecast';
+import { TypeMode } from 'features/hooks/useColorsGradient';
 import { api } from 'global/services/api';
 
 export interface IWeather {

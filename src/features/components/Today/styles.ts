@@ -5,7 +5,7 @@ export const Container = styled.View<{ type: TypeMode }>`
   width: 100%;
   border-radius: 20px;
   background-color: ${({ theme, type }) =>
-    type === 'dark' ? theme.colors.blueCard : theme.colors.blueWhiteCard};
+    type === 'night' ? theme.colors.blueCard : theme.colors.blueWhiteCard};
   padding: 12px 16px;
   margin-top: 20px;
 `;

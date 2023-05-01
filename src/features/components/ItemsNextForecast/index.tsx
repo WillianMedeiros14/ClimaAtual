@@ -1,5 +1,5 @@
 import React from 'react';
-import { Container, ContentRight, Icon, ItemsRight } from './styles';
+import { Container, ContentRight, ItemsRight } from './styles';
 import Text from 'global/components/Text';
 import { Spacer } from 'global/components/Spacer';
 
