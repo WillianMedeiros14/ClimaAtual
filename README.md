@@ -1,37 +1,67 @@
-# Processo seletivo para desenvolvedor mobile
+<h1 align="center">
+  Clima Atual
+</h1>
 
-Olá,
+<br>
 
-Estamos em busca de pessoas que gostem de tecnologia e queiram fazer parte da nossa equipe de desenvolvimento mobile! Se você é um desenvolvedor apaixonado por novas tecnologias, que gosta de trabalhar em equipe e tem vontade de aprender, então essa é a sua chance.
+## 💻 Projeto
 
-O processo seletivo é simples, vamos pedir que você desenvolva um aplicativo, para que possamos avaliar seu potencial. A instrução completa esta mais abaixo.
+Aplicação construída com **[React Native](https://reactnative.dev/)**, com o objetivo de buscar o clima metereológico disponivel na api da **[Weather](https://hgbrasil.com/status/weather)**.
 
-Depois dessa etapa, vamos avaliar todos os candidatos que realizarem a submissão no tempo correto, que serão convidados para uma entrevista final, com parte do nosso time, para discutir os detalhes e forma de trabalho, basicamente para verificarmos se vai dar "_match_".
+<br>
 
-Caso seja selecionado, você irá trabalhar em um ambiente descontraído e inovador, com profissionais de alta qualidade e muitas oportunidades de aprendizado. Além disso, terá a chance de participar do desenvolvimento de um projeto inovador na área da educação.
+## 🚀 Informações
 
-E então, vamos nessa? Mostre para nós que você é o profissional que estamos procurando!
+O design e tela pode ser encontrado neste [Figma Community](https://www.figma.com/community/file/1158928016905524023) criado pela [@becabelin](https://www.figma.com/@becabelin).
 
-## Instruções
+<br>
 
-Se você resolveu topar o desafio, vamos lá! Primeiro de tudo, faça o **fork** deste repositório. Você deverá desenvolver um aplicativo de previsão do tempo. O aplicativo pode ser desenvolvidor em [Flutter](https://flutter.dev/) ou [React-Native](https://reactnative.dev/).
+## 🚀 Resultado do projeto
 
-O resultado final deverá ser parecido com:
+![](images/application-result.gif)
 
-![](images/thumbnail-figma.png)
+## 🎲 Executar aplicação
 
-Esta tela pode ser encontrada neste [Figma Community](https://www.figma.com/community/file/1158928016905524023) criado pela [@becabelin](https://www.figma.com/@becabelin). Claro que uma ou outra coisa pode ser adaptada, mas essa adaptação depois poderá ser questionada na entrevista.
+```bash
+# Clone este repositório
+$ git clone https://github.com/WillianMedeiros14/ClimaAtual.git
 
-Os dados podem ser consumidos da seguinte [API](https://api.hgbrasil.com/weather). Caso queira utilizar outra, escolha uma aberta e envie as intruções de uso, caso necessário.
+# Entre na pasta do projeto.
+$ cd ClimaAtual
 
-Ao fim, altere o `README.md` com instruções para instalação e execução do aplicativo.
+# Instale as dependências
+$ yarn install
 
-Os pontos que serão avaliados:
+# Execute a aplicação (Android)
+# Em uma aba execute
+$ yarn start
+# Em outra aba execute
+$ yarn android
 
-- fidelidade com o mock
-- funcionalidade
-- organização de componentes
-- organização de commits
-- organização de código
+```
 
-Boa sorte 🍀! Aguardamos sua submissão!
+## 🚀 Principais recursos e recnologias ultilizadas
+
+- **[React Native](https://reactnative.dev/)**.
+- **[Typescript](https://www.typescriptlang.org/)**
+- **[Styled-components](https://styled-components.com/docs)**.
+- Os dados ultilizados foram obtidos da api **[Weather](https://hgbrasil.com/status/weather)**.
+
+<br>
+
+## 💻 Outras informações
+
+### - Executar aplicação no iOS
+
+- Não pude testar no iOS por não possui no momento um Mac OS.
+
+### - Erro de metro
+
+- Caso ocorra o erro abaixo:
+  <br>
+  ![](images/error-metro.png)
+
+- Para conseguir rodar e solucionar, basta rodar novamente o mesmo comando, ou seja, yarn start
+
+<br><br><br>
+Feito com 🧡 por Willian Medeiros.
