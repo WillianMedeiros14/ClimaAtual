@@ -1,6 +1,4 @@
 import { TypeCondition } from 'features/components/ItemsNextForecast';
-import { TypeMode } from 'features/hooks/useColorsGradient';
-import { api } from 'global/services/api';
 
 export interface IWeather {
   temp: number;
@@ -40,14 +38,3 @@ export interface IForecast {
 export interface IResultWeather {
   results: IWeather;
 }
-
-export const getData = async () => {
-  try {
-    const response = await api.get<IResultWeather>('/');
-
-    return response.data.results;
-  } catch (error) {
-    console.log('Error');
-    console.log(error);
-  }
-};

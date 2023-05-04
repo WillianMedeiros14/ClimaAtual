@@ -1,7 +1,7 @@
 import { useState } from 'react';
 
-import { IResultWeather, IWeather } from 'features/services/getData.service';
 import { api } from 'global/services/api';
+import { IResultWeather, IWeather } from 'features/types/weather';
 
 export default function useGetDataWeather() {
   const [loading, setLoading] = useState(true);
