@@ -6,7 +6,7 @@
 
 ## 💻 Projeto
 
-Aplicação construída com **[React Native](https://reactnative.dev/)**, com o objetivo de buscar o clima metereológico disponivel na api da **[Weather](https://hgbrasil.com/status/weather)**.
+Aplicação construída com **[React Native](https://reactnative.dev/)**, com o objetivo de buscar o clima metereológico disponível na api da **[Weather](https://hgbrasil.com/status/weather)**.
 
 ## 🚀 Informações
 
@@ -36,10 +36,10 @@ $ yarn android
 
 ```
 
-## 🚀 Principais recursos e recnologias ultilizadas
+## 🚀 Principais recursos e tecnologias ultilizadas
 
 - **[React Native](https://reactnative.dev/)**.
-- **[Typescript](https://www.typescriptlang.org/)**
+- **[Typescript](https://www.typescriptlang.org/)**.
 - **[Styled-components](https://styled-components.com/docs)**.
 - Os dados ultilizados foram obtidos da api **[Weather](https://hgbrasil.com/status/weather)**.
 
@@ -49,7 +49,7 @@ $ yarn android
 
 ### - Executar aplicação no iOS
 
-- Não pude testar no iOS por não possui no momento um Mac OS.
+- Não pude testar no iOS por não possuir no momento um Mac OS.
 
 ### - Erro de metro
 
@@ -57,7 +57,7 @@ $ yarn android
   <br>
   ![](images/error-metro.png)
 
-- Para conseguir rodar e solucionar, basta rodar novamente o mesmo comando, ou seja, yarn start
+- Para conseguir rodar e solucionar, basta rodar novamente o mesmo comando, ou seja, yarn start.
 
 <br><br><br>
 Feito com 🧡 por Willian Medeiros.
