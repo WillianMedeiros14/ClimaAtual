@@ -8,13 +8,9 @@
 
 Aplicação construída com **[React Native](https://reactnative.dev/)**, com o objetivo de buscar o clima metereológico disponivel na api da **[Weather](https://hgbrasil.com/status/weather)**.
 
-<br>
-
 ## 🚀 Informações
 
 O design e tela pode ser encontrado neste [Figma Community](https://www.figma.com/community/file/1158928016905524023) criado pela [@becabelin](https://www.figma.com/@becabelin).
-
-<br>
 
 ## 🚀 Resultado do projeto
 
